@@ -1,0 +1,19 @@
+version: '2'
+services:
+  server:
+    build: ./
+    entrypoint: pm2-docker /app/app/dist/server.js
+    ports:
+      - '10060:10060'
+    depends_on:
+      - postgres
+    links:
+      - postgres
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: best-tattoo
+    volumes:
+      - './docker/database:/var/lib/postgresql/data'

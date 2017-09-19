@@ -1,0 +1,1 @@
+cd server/app && npm run test
