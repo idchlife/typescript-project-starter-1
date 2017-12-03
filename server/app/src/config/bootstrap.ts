@@ -13,6 +13,8 @@ import database from "./database";
 export default async function(): Promise<express.Express> {
   const app = express();
 
+  app.use(bodyParser.json());
+
   app.use(morgan("combined"));
 
   useExpressServer(app, {
@@ -22,8 +24,6 @@ export default async function(): Promise<express.Express> {
   })
 
   app.use(express.static(__dirname + "/../../../assets"));
-
-  app.use(bodyParser.json());
 
   useContainerTypeORM(Container);
   useContainerRoutingControllers(Container);
