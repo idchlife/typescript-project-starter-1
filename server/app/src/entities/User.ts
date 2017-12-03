@@ -1,5 +1,5 @@
 import { ROLES } from "../services/security/security-tools";
-import { AbstractEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export default class User {

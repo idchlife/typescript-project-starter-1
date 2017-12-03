@@ -3,8 +3,7 @@ import SecurityService from "../SecurityService";
 import UserService from "../UserService";
 import { Container } from "typedi";
 
-export type ROLES = "MASTER" | "ADMIN";
-export const ROLE_MASTER: ROLES = "MASTER";
+export type ROLES = "USER" | "ADMIN";
 export const ROLE_ADMIN: ROLES = "ADMIN";
 
 export const JWT_SECRET = "besties are for someting33192";

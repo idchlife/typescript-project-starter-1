@@ -1,11 +1,11 @@
 import SecurityService from "./SecurityService";
 import { Inject } from "typedi";
 import User from "../entities/User";
-import { OrmEntityManager } from "typeorm-typedi-extensions";
+import { OrmManager } from "typeorm-typedi-extensions";
 import { EntityManager } from "typeorm";
 
 export default class UserService {
-  @OrmEntityManager()
+  @OrmManager()
   private entityManager: EntityManager;
 
   @Inject()
