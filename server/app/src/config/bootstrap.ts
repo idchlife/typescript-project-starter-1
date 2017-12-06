@@ -39,6 +39,7 @@ export default async function(): Promise<express.Express> {
     password: database.password,
     username: database.username,
     database: database.database,
+    entities: [__dirname + "/../entities/*.js"],
     synchronize: true
   });
 
